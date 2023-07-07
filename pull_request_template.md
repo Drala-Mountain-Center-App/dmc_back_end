@@ -1,7 +1,7 @@
 ## Types of changes made?
 - [ ] testing
 - [ ] documentation
-- [ ] react
+- [ ] react/rails
 - [ ] functionality
 
 ## What does this PR do?
