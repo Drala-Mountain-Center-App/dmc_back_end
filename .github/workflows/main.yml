@@ -1,0 +1,54 @@
+name: Ruby on Rails CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    services:
+      postgres:
+        image: postgres:11
+        env:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_DB: rails_test
+        ports: ["5432:5432"]
+        options: --health-cmd pg_isready --health-interval 10s --health-timeout 5s --health-retries 5
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Set up Ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: 3.1
+
+    - name: Build and test with Rake
+      env:
+        RAILS_ENV: test
+        PGHOST: localhost
+        PGUSER: postgres
+        PGPASSWORD: postgres
+        DATABASE_PORT: 5432
+        DATABASE_NAME: rails_test
+      run: |
+        sudo apt-get -yqq install libpq-dev
+        gem install bundler
+        bundle install --jobs 4 --retry 3
+        bundle exec rails db:create
+        bundle exec rails db:schema:load
+        bundle exec rspec
+
+    - name: Create Coverage Artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: code-coverage
+        path: coverage/
+
+
