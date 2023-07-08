@@ -27,7 +27,7 @@ jobs:
     - name: Set up Ruby
       uses: ruby/setup-ruby@v1
       with:
-        ruby-version: 3.1
+        ruby-version: 3.1.1
 
     - name: Build and test with Rake
       env:
