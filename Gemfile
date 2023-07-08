@@ -46,7 +46,7 @@ end
 group :test do
   gem 'rspec-rails'
   gem 'shoulda-matchers'
-  gem 'simplecov'
+  gem 'simplecov', require: false
   gem 'vcr'
   gem 'webmock'
 end
