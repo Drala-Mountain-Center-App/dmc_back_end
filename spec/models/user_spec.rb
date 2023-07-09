@@ -8,4 +8,8 @@ RSpec.describe User, type: :model do
     it { should validate_uniqueness_of(:email)}
     it { is_expected.to validate_presence_of(:member) }
   end
+
+  describe 'Relationships' do
+    it { should have_many(:meditations).dependent(:destroy) }
+  end
 end
