@@ -38,5 +38,47 @@ RSpec.describe "User" do
     expect(result.dig("data", "allUsers").length).to eq(2)
     end
   end
+
+  describe "user_by_email" do
+    it "retreives user by email" do
+      user = User.create!(first_name: 'Alejandro', last_name: 'last_name', email: 'email@email.email', member: true )
+      query = <<~GQL
+      query{
+      userByEmail(email: "email@email.email") {
+      id
+      firstName
+      lastName
+      email
+      member
+      }
+    }
+    GQL
+    result = DmcBackEndSchema.execute(query)
+
+    expect(user.first_name).to eq(result.dig("data", "userByEmail", "firstName"))
+    expect(user.email).to eq(result.dig("data", "userByEmail", "email"))
+    end
+  end
+
+  describe "user" do
+    it "retreives user by id" do
+      user = User.create!(first_name: 'Alejandro', last_name: 'last_name', email: 'email@email.email', member: true )
+      query = <<~GQL
+      query{
+      user(id: "#{user.id}") {
+      id
+      firstName
+      lastName
+      email
+      member
+      }
+    }
+    GQL
+    result = DmcBackEndSchema.execute(query)
+    
+    expect(user.first_name).to eq(result.dig("data", "user", "firstName"))
+    expect(user.email).to eq(result.dig("data", "user", "email"))
+    end
+  end
 end
 
