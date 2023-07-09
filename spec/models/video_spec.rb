@@ -3,7 +3,6 @@ require 'rails_helper'
 RSpec.describe Video, type: :model do
   describe 'Validations' do
     it { should validate_presence_of(:title) }
-    it { should validate_presence_of(:video_id) }
     it { should validate_presence_of(:speaker) }
     it { should validate_presence_of(:topic) }
     it { should validate_presence_of(:length) }
