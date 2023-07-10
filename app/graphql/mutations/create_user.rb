@@ -17,7 +17,8 @@ module Mutations
         last_name: last_name,
         member: member,
         email: auth_provider&.[](:credentials)&.[](:email),
-        password: auth_provider&.[](:credentials)&.[](:password)
+        password: auth_provider&.[](:credentials)&.[](:password),
+        password_confirmation: auth_provider&.[](:credentials)&.[](:password_confirmation)
       )
     end
   end
