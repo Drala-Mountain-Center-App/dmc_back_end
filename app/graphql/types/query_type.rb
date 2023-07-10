@@ -13,7 +13,11 @@ module Types
     end
 
     def user_by_email(email)
-      User.find_by(email)
+      if User.find_by(email).nil?
+        GraphQL::ExecutionError.new("Invalid input: Couldn't find User with 'email'=#{email[:email]}")
+      else
+        User.find_by(email)
+      end 
     end
 
     field :user, Types::UserType, null: false, description: "Gets one user by ID" do
@@ -21,7 +25,12 @@ module Types
     end
 
     def user(id:)
-      User.find(id)
+      begin
+        User.find(id)
+      rescue => exception
+        GraphQL::ExecutionError.new("Invalid input: #{exception.message}")
+      end
     end
   end
 end
+
