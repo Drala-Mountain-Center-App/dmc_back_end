@@ -28,14 +28,19 @@ RSpec.describe "Mutation create User" do
   end
 
   it "if user email is not unique/user already exists with that email, error message is sent" do
-    User.create!(first_name: 'logan', last_name: 'logan', email: 'loganlogan@gmail.com', member: false )
+    User.create!(first_name: 'logan', last_name: 'logan', email: 'loganlogan@gmail.com', member: false, password: "password123" )
     query = <<~GQL
     mutation{
       createUser(input: {
           firstName: "Redo",
           lastName: "Muller",
-          email: "loganlogan@gmail.com",
-          member: false
+          member: false,
+          authProvider: {
+            credentials: {
+              email: "loganlogan@gmail.com",
+              password: "password123"
+            }
+          }
       }) {
       id
       firstName
@@ -56,8 +61,13 @@ RSpec.describe "Mutation create User" do
       createUser(input: {
           firstName: "",
           lastName: "logan",
-          email: "loganlogan@gmail.com",
-          member: false
+          member: false,
+          authProvider: {
+            credentials: {
+              email: "bestreadymuller@hotmail.com",
+              password: "password123"
+            }
+          }
       }) {
       id
       firstName
@@ -76,8 +86,13 @@ RSpec.describe "Mutation create User" do
       createUser(input: {
           firstName: "logan",
           lastName: "",
-          email: "loganlogan@gmail.com",
-          member: false
+          member: false,
+          authProvider: {
+            credentials: {
+              email: "bestreadymuller@hotmail.com",
+              password: "password123"
+              }
+            }
       }) {
       id
       firstName
@@ -96,8 +111,13 @@ RSpec.describe "Mutation create User" do
       createUser(input: {
           firstName: "logan",
           lastName: "Cole",
-          email: "",
           member: false
+          authProvider: {
+            credentials: {
+              email: "",
+              password: "password123"
+            }
+          }
       }) {
       id
       firstName
@@ -118,8 +138,13 @@ RSpec.describe "Mutation create User" do
       createUser(input: {
           firstName: "logan",
           lastName: "Cole",
-          email: "happy@happy.com",
-          member: nil
+          member: nil,
+          authProvider: {
+            credentials: {
+              email: "bestreadymuller@hotmail.com",
+              password: "password123"
+            }
+          }
       }) {
       id
       firstName
@@ -140,7 +165,12 @@ RSpec.describe "Mutation create User" do
       createUser(input: {
           firstName: "logan",
           lastName: "Cole",
-          email: "happy@happy.com",
+          authProvider: {
+            credentials: {
+              email: "bestreadymuller@hotmail.com",
+              password: "password123"
+            }
+          }
       }) {
       id
       firstName
@@ -161,7 +191,13 @@ RSpec.describe "Mutation create User" do
       createUser(
           firstName: "logan",
           lastName: "Cole",
-          email: "happy@happy.com",
+          member: false,
+          authProvider: {
+            credentials: {
+              email: "bestreadymuller@hotmail.com",
+              password: "password123"
+            }
+          }
       ) {
       id
       firstName
@@ -182,8 +218,14 @@ RSpec.describe "Mutation create User" do
       createUser(input: {
           firstName: "Redo",
           lastName: "Muller",
-          email: "bestreadymuller@hotmail.com",
           member: false
+          pants_size: "yes"
+          authProvider: {
+            credentials: {
+              email: "bestreadymuller@hotmail.com",
+              password: "password123"
+            }
+          }
       }) {
       id
       firstName
@@ -195,7 +237,9 @@ RSpec.describe "Mutation create User" do
     }
     GQL
     result = DmcBackEndSchema.execute(query)
-    error = result.dig("errors").first
-    expect(error["message"]).to eq("Field 'pants_size' doesn't exist on type 'User'")
+    error1 = result.dig("errors")[0]
+    error2 = result.dig("errors")[1]
+    expect(error1["message"]).to eq("InputObject 'CreateUserInput' doesn't accept argument 'pants_size'")
+    expect(error2["message"]).to eq("Field 'pants_size' doesn't exist on type 'User'")
   end
 end
