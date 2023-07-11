@@ -23,5 +23,17 @@ module Types
     def user(id:)
       User.find(id)
     end
+
+    field :all_programs, [ProgramType], null: false, description: "Gets all programs"
+    
+    def all_programs
+      program_facade.programs
+    end
+
+    private 
+
+    def program_facade
+      @_facade ||= CalendarFacade.new
+    end
   end
 end
