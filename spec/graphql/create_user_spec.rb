@@ -11,8 +11,7 @@ RSpec.describe "Mutation create User" do
           authProvider: {
             credentials: {
               email: "bestreadymuller@hotmail.com",
-              password: "password123",
-              passwordConfirmation: "password123"
+              password: "password123"
             }
           }
       }) {
@@ -29,4 +28,3 @@ RSpec.describe "Mutation create User" do
   expect(User.find_by(email: "bestreadymuller@hotmail.com")).to be_a(User)
   end
 end
-
