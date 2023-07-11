@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_07_09_215236) do
+ActiveRecord::Schema[7.0].define(version: 2023_07_11_204527) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -39,9 +39,9 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_09_215236) do
     t.string "length"
     t.string "date_recorded"
     t.string "video_url"
-    t.string "img_url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "embed_code"
   end
 
   add_foreign_key "meditations", "users"
