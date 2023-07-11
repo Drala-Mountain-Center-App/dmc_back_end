@@ -1,24 +1,35 @@
-# README
+<a name="readme-top"></a>
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Issues][issues-shield]][issues-url]
 
-Things you may want to cover:
 
-* Ruby version
 
-* System dependencies
 
-* Configuration
 
-* Database creation
 
-* Database initialization
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
 
-* ...
+
+
+
+
+
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!--  -->
+[contributors-shield]:
+[contributors-url]:
+[forks-shield]:
+[forks-url]:
+[linkedin]:
+[logan-li-url]:
+[reid-li-url]:
+[alejandro-li-url]:
+[sam-li-url]:
+[carol-li-url]:
+[sarah-li-url]:
+[sarah-li-url]:
