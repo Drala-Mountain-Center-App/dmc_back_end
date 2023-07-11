@@ -7,8 +7,13 @@ RSpec.describe "Mutation create User" do
       createUser(input: {
           firstName: "Redo",
           lastName: "Muller",
-          email: "bestreadymuller@hotmail.com",
-          member: false
+          member: false,
+          authProvider: {
+            credentials: {
+              email: "bestreadymuller@hotmail.com",
+              password: "password123"
+            }
+          }
       }) {
       id
       firstName
@@ -18,8 +23,8 @@ RSpec.describe "Mutation create User" do
       }
   }
   GQL
-  result = DmcBackEndSchema.execute(query)
+  DmcBackEndSchema.execute(query)
+
   expect(User.find_by(email: "bestreadymuller@hotmail.com")).to be_a(User)
   end
 end
-
