@@ -7,8 +7,13 @@ RSpec.describe "Mutation create User" do
       createUser(input: {
           firstName: "Redo",
           lastName: "Muller",
-          email: "bestreadymuller@hotmail.com",
-          member: false
+          member: false,
+          authProvider: {
+            credentials: {
+              email: "bestreadymuller@hotmail.com",
+              password: "password123"
+            }
+          }
       }) {
       id
       firstName
@@ -194,4 +199,3 @@ RSpec.describe "Mutation create User" do
     expect(error["message"]).to eq("Field 'pants_size' doesn't exist on type 'User'")
   end
 end
-
