@@ -39,8 +39,8 @@ RSpec.describe "User" do
     end
 
     it "if no attributes are passed into query, error message is sent" do
-      User.create!(first_name: 'Alejandro', last_name: 'last_name', email: 'email@email.email', member: true )
-      User.create!(first_name: 'logan', last_name: 'logan', email: 'loganlogan@gmail.com', member: false )
+      User.create!(first_name: 'Alejandro', last_name: 'last_name', email: 'email@email.email', member: true, password: 'password123')
+      User.create!(first_name: 'logan', last_name: 'logan', email: 'loganlogan@gmail.com', member: false, password: 'banana123')
         query = <<~GQL
         query{
         allUsers {
@@ -53,8 +53,8 @@ RSpec.describe "User" do
     end
 
     it "if incorrect attribute is passed into query, error message is sent" do
-      User.create!(first_name: 'Alejandro', last_name: 'last_name', email: 'email@email.email', member: true )
-      User.create!(first_name: 'logan', last_name: 'logan', email: 'loganlogan@gmail.com', member: false )
+      User.create!(first_name: 'Alejandro', last_name: 'last_name', email: 'email@email.email', member: true, password: 'password123')
+      User.create!(first_name: 'logan', last_name: 'logan', email: 'loganlogan@gmail.com', member: false, password: 'banana123')
         query = <<~GQL
         query{
         allUsers {
@@ -94,7 +94,7 @@ RSpec.describe "User" do
     end
 
     it "if email is not linked to a user, error message is sent" do
-      user = User.create!(first_name: 'Alejandro', last_name: 'last_name', email: 'email@email.email', member: true )
+      user = User.create!(first_name: 'Alejandro', last_name: 'last_name', email: 'email@email.email', member: true, password: 'password123')
         query = <<~GQL
         query{
         userByEmail(email: "wrongemail@gmail.com") {
@@ -133,7 +133,7 @@ RSpec.describe "User" do
     end
 
     it "if passed ID does not exist, error is sent" do
-      user = User.create!(first_name: 'Alejandro', last_name: 'last_name', email: 'email@email.email', member: true )
+      user = User.create!(first_name: 'Alejandro', last_name: 'last_name', email: 'email@email.email', member: true, password: 'password123')
       query = <<~GQL
       query{
       user(id: 10) {

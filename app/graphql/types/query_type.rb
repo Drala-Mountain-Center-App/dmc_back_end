@@ -31,6 +31,12 @@ module Types
         GraphQL::ExecutionError.new("Invalid input: #{exception.message}")
       end
     end
+
+    field :all_meditations, [MeditationType], null: false, description: "Gets all meditations for signed in user"
+
+    def all_meditations
+      Meditation.where(user: context[:current_user])
+    end
   end
 end
 
