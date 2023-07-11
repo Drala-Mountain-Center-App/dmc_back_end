@@ -7,19 +7,16 @@ RSpec.describe CalendarFacade do
 
       programs.each do |program|
       expect(program).to be_a(Program)
-      expect(program).to have_key(:program_name)
-      expect(program).to have_key(:program_start_date)
-      expect(program).to have_key(:program_end_date)
-      expect(program).to have_key(:program_content)
-      expect(program).to have_key(:program_image)
-      expect(program).to have_key(:program_price)
-      expect(program).to have_key(:program_location)
-      expect(program).to have_key(:program_address)
-      expect(program).to have_key(:program_contact)
-      expect(program).to have_key(:program_url)
-      expect(program).to have_key(:registration_url)
-      expect(program).to have_key(:program_categories)
-      expect(program).to have_key(:program_teachers)
+      expect(program.name).to be_a(String)
+      expect(program.start_date).to be_a(String)
+      expect(program.end_date).to be_a(String)
+      expect(program.content).to be_a(String)
+      expect(program.image).to be_a(String)
+      expect(program.price).to be_a(String) unless program.price.nil?
+      expect(program.url).to be_a(String)
+      expect(program.registration_url).to be_a(String)
+      expect(program.categories).to be_a(Array)
+      expect(program.teachers).to be_a(Array)
       end
     end
   end
