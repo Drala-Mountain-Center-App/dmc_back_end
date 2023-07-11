@@ -2,9 +2,9 @@ name: Ruby on Rails CI
 
 on:
   push:
-    branches: [ main, repository-setup, graphql-integration ]
+    branches: [ main, repository-setup, graphql-integration, retreat-calendar-api ]
   pull_request:
-    branches: [ main, repository-setup, graphql-integration ]
+    branches: [ main, repository-setup, graphql-integration, retreat-calendar-api ]
 
 jobs:
   build:
