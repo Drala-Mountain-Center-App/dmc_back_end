@@ -3,8 +3,8 @@ require "rails_helper"
 RSpec.describe "User" do
   describe "all_users" do
     it "retrieves all users" do
-      User.create!(first_name: 'Alejandro', last_name: 'last_name', email: 'email@email.email', member: true )
-      User.create!(first_name: 'logan', last_name: 'logan', email: 'loganlogan@gmail.com', member: false )
+      User.create!(first_name: 'Alejandro', last_name: 'last_name', email: 'email@email.email', member: true, password: 'password123')
+      User.create!(first_name: 'logan', last_name: 'logan', email: 'loganlogan@gmail.com', member: false, password: 'banana123')
       query = <<~GQL
       query{
       allUsers {
@@ -41,7 +41,7 @@ RSpec.describe "User" do
 
   describe "user_by_email" do
     it "retreives user by email" do
-      user = User.create!(first_name: 'Alejandro', last_name: 'last_name', email: 'email@email.email', member: true )
+      user = User.create!(first_name: 'Alejandro', last_name: 'last_name', email: 'email@email.email', member: true, password: 'password123')
       query = <<~GQL
       query{
       userByEmail(email: "email@email.email") {
@@ -62,7 +62,7 @@ RSpec.describe "User" do
 
   describe "user" do
     it "retreives user by id" do
-      user = User.create!(first_name: 'Alejandro', last_name: 'last_name', email: 'email@email.email', member: true )
+      user = User.create!(first_name: 'Alejandro', last_name: 'last_name', email: 'email@email.email', member: true, password: 'password123')
       query = <<~GQL
       query{
       user(id: "#{user.id}") {
