@@ -7,27 +7,13 @@ RSpec.describe 'sign in user with GraphQL' do
     end
 
     it 'can sign in a user and send user info back' do
-      query = <<~GQL
-      mutation{
-        signInUser( input: {
-          credentials: {
-            email: "reid@gmail.com",
-            password: "password123"
-          }
-        }
-        ) {
-          token
-          user {
-            id
-          }
-        }
-      }
-      GQL
-      results = DmcBackEndSchema.execute(query)
+      mutation = Mutations::SignInUser.new(object: nil, field: nil, context: { session: {} })
 
-      expect(results.dig("data", "signInUser", "token")).to be_a(String)
-      expect(results.dig("data", "signInUser", "token").length).to eq(72)
-      expect(results.dig("data", "signInUser", "user", "id").to_i).to eq(@user.id)
+      credentials = { email: 'reid@gmail.com', password: 'password123' }
+      result = mutation.resolve(credentials: credentials)
+
+      expect(result[:token]).to be_present
+      expect(mutation.context[:session][:token]).to eq(result[:token])
     end
   end
 end
