@@ -24,12 +24,12 @@
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!--  -->
-[contributors-shield]: https://img.shields.io/github/contributors/RentInform/dmc_back_end.svg?style=for-the-badge
-[contributors-url]: https://github.com/RentInform/BE-Rent-Inform/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/RentInform/BE-Rent-Inform.svg?style=for-the-badge
-[forks-url]: https://github.com/RentInform/BE-Rent-Inform/network/members
-[stars-shield]: https://img.shields.io/github/stars/RentInform/BE-Rent-Inform.svg?style=for-the-badge
-[stars-url]: https://github.com/RentInform/BE-Rent-Inform/stargazers
+[contributors-shield]: https://img.shields.io/github/contributors/Drala-Mountain-Center-App/dmc_back_end.svg?style=for-the-badge
+[contributors-url]: https://github.com/Drala-Mountain-Center-App/dmc_back_end/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/Drala-Mountain-Center-App/dmc_back_end.svg?style=for-the-badge
+[forks-url]: https://github.com/Drala-Mountain-Center-App/dmc_back_end/network/members
+[stars-shield]: https://img.shields.io/github/stars/Drala-Mountain-Center-App/dmc_back_end.svg?style=for-the-badge
+[stars-url]: https://github.com/Drala-Mountain-Center-App/dmc_back_end/stargazers
 [linkedin]: https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white
 [logan-li-url]:
 [reid-li-url]:
