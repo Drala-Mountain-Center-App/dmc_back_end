@@ -30,6 +30,8 @@
 [forks-url]: https://github.com/Drala-Mountain-Center-App/dmc_back_end/network/members
 [stars-shield]: https://img.shields.io/github/stars/Drala-Mountain-Center-App/dmc_back_end.svg?style=for-the-badge
 [stars-url]: https://github.com/Drala-Mountain-Center-App/dmc_back_end/stargazers
+[issues-shield]: https://img.shields.io/github/issues/Drala-Mountain-Center-App/dmc_back_end.svg?style=for-the-badge
+[issues-url]: https://github.com/Drala-Mountain-Center-App/dmc_back_end/issues
 [linkedin]: https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white
 [logan-li-url]:
 [reid-li-url]:
