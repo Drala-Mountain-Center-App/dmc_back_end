@@ -6,4 +6,8 @@ class User < ApplicationRecord
   validates_uniqueness_of :email
   validates :password, length: { minimum: 6 }
   has_many :meditations, dependent: :destroy
+
+  def total_meditations
+    meditations.count
+  end
 end
