@@ -5,12 +5,26 @@
 [![Issues][issues-shield]][issues-url]
 [![Stars][stars-shield]][stars-url]
 
+<!-- DMC Logo -->
 <div align="center">
  <pre>
     <code>
-      <img src="https://user-images.githubusercontent.com/112587650/252702713-1b23d445-c905-4ad8-ad54-988a234917b8.jpeg" alt="Wire Frame" width="100%">
+      <img src="https://user-images.githubusercontent.com/112587650/253305295-f548caac-b273-4f40-b29e-f5284e94109a.jpeg" alt="DMC Logo" width="100%">
     </code>
   </pre>
+  </br>
+<!-- Main Image -->
+ <pre>
+    <code>
+      <img src="https://user-images.githubusercontent.com/112587650/252702713-1b23d445-c905-4ad8-ad54-988a234917b8.jpeg" alt="Main Image" width="100%">
+    </code>
+  </pre>
+
+The Drala Mountain Center App was made in association with [Drala Mountain Center](https://www.dralamountain.org/).
+The App allows users to see scheduled retreats, meditate with a meditation timer, and view videos embeded in the app, and donate to DMC via their website. <br>
+The Front End is built on React Native and written in Javascript. The Back End is built with Ruby on Rails. The Front End makes querries to the Back End GraphQL. 
+
+
 </div>
 
 
