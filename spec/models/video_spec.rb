@@ -8,6 +8,6 @@ RSpec.describe Video, type: :model do
     it { should validate_presence_of(:length) }
     it { should validate_presence_of(:date_recorded) }
     it { should validate_presence_of(:video_url) }
-    it { should validate_presence_of(:img_url) }
+    it { should validate_presence_of(:embed_code) }
   end
 end

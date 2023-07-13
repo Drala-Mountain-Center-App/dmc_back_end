@@ -24,6 +24,20 @@ module Types
       User.find(id)
     end
 
+    field :all_videos, [VideoType], null: false
+
+    def all_videos
+      Video.all
+    end
+
+    field :video_by_id, Types::VideoType, null: false, description: "Gets one video by ID" do
+      argument :id, ID, required: true
+    end
+
+    def video_by_id(id:)
+      Video.find(id)
+    end
+    
     field :all_programs, [ProgramType], null: false, description: "Gets all programs"
     
     def all_programs
