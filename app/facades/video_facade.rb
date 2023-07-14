@@ -3,7 +3,8 @@ class VideoFacade
     @video_id = video_id
   end
 
-  def video_name
+  def title
+    require 'pry'; binding.pry
     video_data
   end
 
