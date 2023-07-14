@@ -37,6 +37,7 @@ jobs:
         PGPASSWORD: postgres
         DATABASE_PORT: 5432
         DATABASE_NAME: rails_test
+        VIMEO_TOKEN: ${{ secrets.VIMEO_TOKEN }}}
       run: |
         sudo apt-get -yqq install libpq-dev
         gem install bundler
