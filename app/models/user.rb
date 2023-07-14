@@ -17,7 +17,7 @@ class User < ApplicationRecord
     time_hash[:seconds] = seconds
     formatted_time = format_time(seconds)
     time_hash[:formatted] = formatted_time
-    string = time_hash.to_s
+    time_hash.to_s
   end
 
   def format_time(seconds)
