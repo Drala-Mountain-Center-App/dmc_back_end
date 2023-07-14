@@ -6,14 +6,14 @@ RSpec.describe CalendarService do
     programs = service.get_programs
 
     expect(programs).to be_a(Array)
-    
+
     programs.each do |program|
       expect(program).to have_key(:program_name)
       expect(program[:program_name]).to be_a(String)
 
       expect(program).to have_key(:program_start_date)
       expect(program[:program_start_date]).to be_a(String)
-      
+
       expect(program).to have_key(:program_end_date)
       expect(program[:program_end_date]).to be_a(String)
 
