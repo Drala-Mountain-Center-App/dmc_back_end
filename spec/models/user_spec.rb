@@ -26,5 +26,25 @@ RSpec.describe User, type: :model do
         expect(@user2.total_meditations).to eq(0)
       end
     end
+
+    describe 'total_meditation_time' do
+      it "shows total amount of time spent meditating in hour::minutes format" do
+        @user = User.create!(first_name: "Reid", last_name: "Miller", email: "reid@gmail.com", member: true, password: "password123")
+        @user2 = User.create!(first_name: "Reid", last_name: "Miller", email: "rd@gmail.com", member: true, password: "password123")
+        @user_meditations = create_list(:meditation, 25, user_id: @user.id)
+
+        @seconds = 30000
+        expect(@user.total_meditation_time(@seconds)[:seconds]).to eq(30000)
+        expect(@user.total_meditation_time(@seconds)[:formatted]).to eq("8 hours 20 minutes")
+      end
+
+      it "format_time method converts seconds into readable format" do
+        @user = User.create!(first_name: "Reid", last_name: "Miller", email: "reid@gmail.com", member: true, password: "password123")
+
+        expect(@user.format_time(30000)).to eq("8 hours 20 minutes")
+        expect(@user.format_time(60)).to eq("1 minute")
+        expect(@user.format_time(100000)).to eq("27 hours 46 minutes 40 seconds")
+      end
+    end
   end
 end
