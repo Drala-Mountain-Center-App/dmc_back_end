@@ -1,9 +1,9 @@
 require 'rails_helper'
 
 RSpec.describe VimeoService do
-  it 'returns video thumbnails', :vcr do
+  it 'returns video details', :vcr do
     service = VimeoService.new
-    vimeo_id = "844631799"
+    vimeo_id = 844631799
     video = service.get_video(vimeo_id)
 
     expect(video).to be_a(Hash)
