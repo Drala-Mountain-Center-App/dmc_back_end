@@ -11,12 +11,13 @@ class User < ApplicationRecord
     meditations.count
   end
 
-  def total_meditation_time(seconds)
+  def total_meditation_time
+    seconds = meditations.sum(:total_sitting_time)
     time_hash = { }
     time_hash[:seconds] = seconds
     formatted_time = format_time(seconds)
     time_hash[:formatted] = formatted_time
-    time_hash
+    string = time_hash.to_s
   end
 
   def format_time(seconds)
