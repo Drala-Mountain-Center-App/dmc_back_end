@@ -21,6 +21,8 @@ module Mutations
         embed_code: video.embed_code,
         vimeo_id: vimeo_id,
       )
+    rescue ActiveRecord::RecordInvalid => e
+      GraphQL::ExecutionError.new("Invalid input: #{e.record.errors.full_messages.join(', ')}")
     end
   end
 end
