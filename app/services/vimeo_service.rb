@@ -1,6 +1,6 @@
 class VimeoService
-  def get_video_thumbnail(video_id)
-    get_url("/videos/#{video_id}/pictures")
+  def get_video(vimeo_id)
+    get_url("/videos/#{vimeo_id}")
   end
 
   private
