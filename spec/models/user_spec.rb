@@ -43,6 +43,19 @@ RSpec.describe User, type: :model do
         expect(@user.format_time(30000)).to eq("8 hours 20 minutes")
         expect(@user.format_time(60)).to eq("1 minute")
         expect(@user.format_time(100000)).to eq("27 hours 46 minutes 40 seconds")
+        expect(@user.format_time(1200)).to eq("20 minutes")
+      end
+    end
+
+    describe 'average_meditation_time' do
+      it "provides the average time of a users meditation sessions" do
+        @user = User.create!(first_name: "Reid", last_name: "Miller", email: "reid@gmail.com", member: true, password: "password123")
+        @user2 = User.create!(first_name: "Reid", last_name: "Miller", email: "rd@gmail.com", member: true, password: "password123")
+        @user_meditations = create_list(:meditation, 25, user_id: @user.id)
+        @user2_meditations = create_list(:meditation, 25, user_id: @user2.id, total_sitting_time: 1000)
+
+        expect(@user.average_meditation_time).to eq("20 minutes")
+        expect(@user2.average_meditation_time).to eq("16 minutes 40 seconds")
       end
     end
   end

@@ -20,6 +20,11 @@ class User < ApplicationRecord
     time_hash.to_s
   end
 
+  def average_meditation_time
+    seconds = meditations.average(:total_sitting_time).to_i
+    formatted_time = format_time(seconds)
+  end
+
   def format_time(seconds)
     time_array = ["#{seconds / 3600}", "#{seconds / 60 % 60}", "#{seconds % 60}"]
     formatted_time_array = add_time_string(time_array)
