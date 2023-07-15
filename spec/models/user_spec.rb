@@ -34,7 +34,7 @@ RSpec.describe User, type: :model do
         @user_meditations = create_list(:meditation, 25, user_id: @user.id)
 
         expect(@user.meditations.sum(:total_sitting_time)).to eq(30000)
-        expect(@user.total_meditation_time).to eq("{:seconds=>30000, :formatted=>\"8 hours 20 minutes\"}")
+        expect(@user.total_meditation_time).to eq("8 hours 20 minutes")
       end
 
       it "format_time method converts seconds into readable format" do
