@@ -51,9 +51,9 @@ module Types
     def video_by_id(id:)
       Video.find(id)
     end
-    
+
     field :all_programs, [ProgramType], null: false, description: "Gets all programs"
-    
+
     def all_programs
       program_facade.programs
     end
