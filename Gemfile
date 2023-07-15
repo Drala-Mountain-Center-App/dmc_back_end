@@ -31,7 +31,7 @@ gem 'graphql', '1.11.6'
 
 gem 'faraday'
 gem 'figaro'
-
+gem 'rack-cors'
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 # gem "rack-cors"
 
