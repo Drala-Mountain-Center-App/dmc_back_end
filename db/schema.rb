@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_07_09_002732) do
+ActiveRecord::Schema[7.0].define(version: 2023_07_14_202537) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -29,6 +29,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_09_002732) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "last_name"
+    t.string "password_digest"
   end
 
   create_table "videos", force: :cascade do |t|
@@ -38,9 +39,12 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_09_002732) do
     t.string "length"
     t.string "date_recorded"
     t.string "video_url"
-    t.string "img_url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "embed_code"
+    t.integer "vimeo_id"
+    t.string "description"
+    t.string "thumbnail_url"
   end
 
   add_foreign_key "meditations", "users"
