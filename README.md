@@ -45,11 +45,12 @@ The Front End is built on React Native and written in Javascript. The Back End i
 
 * [![ruby][ruby]][ruby-url]
 * [![rails][rails]][rails-url]
+* [![postgresql][postgresql]][postgresql-url]
 * [![javascript][javascript]][javascript-url]
 * [![react-native][react-native]][react-native-url]
 * [![heroku][heroku]][heroku-url]
 * [![graphql][graphql]][graphql-url]
-* [![express][express]][express-url]
+* [![expo][expo]][expo-url]
 
 
 
@@ -61,11 +62,18 @@ The Front End is built on React Native and written in Javascript. The Back End i
 
 
 ## MVP 
-<pre>
+* Recreate the feel of Drala-Mounatain-Center's web application as a phone application.
+* Create a link to Drala Mountain Center donation site, Network for Good within our application.
+* Create a meditation timer page that provides user with a soothing experience while meditating.
+* Database of DMC video talks, searchable, possibly using Vimeo.
+* Import program calendar from DMC website backend.
+* Integrate GraphQL as a stretch technology to facilitate API calls to our backend
+* Integrate React Native as a stretch technology to prepare application for IOS deployment.
+<!-- <pre>
     <code>
       <img src="https://user-images.githubusercontent.com/112587650/252702713-1b23d445-c905-4ad8-ad54-988a234917b8.jpeg" alt="MVP Image" width="100%">
     </code>
-</pre>
+</pre> -->
 
 ## Wireframes
 
@@ -138,16 +146,18 @@ The Front End is built on React Native and written in Javascript. The Back End i
 [ruby-url]: https://www.ruby-lang.org/en/
 [rails]: https://img.shields.io/badge/Ruby_on_Rails-CC0000?style=for-the-badge&logo=ruby-on-rails&logoColor=white
 [rails-url]: https://rubyonrails.org/
+[postgresql]: https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white/
+[postgresql-url]: https://www.postgresql.org/docs/
 [heroku]: https://img.shields.io/badge/Heroku-430098?style=for-the-badge&logo=heroku&logoColor=white
 [heroku-url]: https://devcenter.heroku.com/articles/getting-started-with-rails7
 [javascript]: https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black
-<!--
-[javascript_url]: JS DOCS link
-[graphql]: https://img.shields.io/badge/React_Native-20232A?style=for-the-badge&logo=react&logoColor=61DAFB 
-[graphql_url]: GraphQL Docs link 
-[express]: https://img.shields.io/badge/Express.js-404D59?style=for-the-badge
-[express_url]: Expo Docs link
--->
+[javascript-url]: https://developer.mozilla.org/en-US/docs/Web/JavaScript
+[react-native]: https://img.shields.io/badge/React_Native-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
+[react-native-url]: https://reactnative.dev/docs/getting-started
+[graphql]: https://img.shields.io/badge/-GraphQL-E10098?style=for-the-badge&logo=graphql&logoColor=white
+[graphql-url]: https://graphql.org/
+[expo]: https://img.shields.io/badge/expo-1C1E24?style=for-the-badge&logo=expo&logoColor=#D04A37
+[expo-url]: https://docs.expo.dev/
 [github]: https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white
 [project-FE-url]: https://github.com/Drala-Mountain-Center-App/dmc_front_end
 [project-BE-url]: https://github.com/Drala-Mountain-Center-App/dmc_back_end
