@@ -23,23 +23,19 @@
 <!-- Table of Contents -->
 
 # Table of Contents
-- [About](https://github.com/Drala-Mountain-Center-App/dmc_back_end/edit/27-create-backend-readme/README.md#about)
+
+- [About](#about)
 - [Built With](#built-with)
+- [Minimum Viable Product](#minimum-viable-product)
+- [Possible Extensions](#possible-extensions)
+- [GraphQL Fields](#graphql-fields)
+ - [Queries and Mutations](#queries-and-mutations)
+  - [List of queries](#list-of-queries)
+  - [List of mutations](#list-of-mutations)
+- [Application Images](#application-images)
+- [Schema](#schema)
 - [Contributors](#contributors)
- 
-  <details>
-      <summary>Table of Contents</summary>
-      <ol>
-        <li><a href="##About">About</a></li>
-        <li><a href="##Built-With">Built With</a></li>
-        <li><a href="##GraphQL-Fields">GraphQL Fields</a></li>
-        <li><a href="##MVP">MVP</a></li>
-        <li><a href="##Possible-Extensions">Possible Extensions</a></li>
-        <li><a href="##Wireframes">Wireframes</a></li>
-        <li><a href="##Schema">Schema</a></li>
-        <li><a href="##Contributors">Contributors</a></li>
-      </ol>
-  </details>
+
 
 ## About
 
@@ -58,8 +54,27 @@ The dmc_back_end application provides a single GraphQL endpoint with all app inf
 [![graphql][graphql]][graphql-url]
 [![expo][expo]][expo-url]
 
+## Minimum Viable Product 
+* Recreate the feel of Drala-Mounatain-Center's web application as a phone application.
+* Create a link to Drala Mountain Center donation site, Network for Good within our application.
+* Create a meditation timer page that provides user with a soothing experience while meditating.
+* Database of DMC video talks, searchable, possibly using Vimeo.
+* Import program calendar from DMC website backend.
+* Integrate GraphQL as a stretch technology to facilitate API calls to our backend
+* Integrate React Native as a stretch technology to prepare application for IOS deployment.
 
+## Possible Extensions
 
+* Login for user, to allow for statistics collection.
+* User data collection displayed: "Here's your meditation habits, you've watched these videos".
+* Randomized daily quotes from highly regarded figures linked to DMC or lojong slogans.
+* Stripe/Auth.net/square for payment integration (likely prefer Stripe or something that can take apple/google pay, Paypal, Venmo, etc.
+* Hosting on Android and Apple Store.
+* AWS/Docker integration.
+* Like/Love buttons/discussion boards for videos.
+* Specific Advanced Practice Trackers (Ngondro/Stroke Practice).
+* Integrate Web-sockets to add live chat feature.
+* Add collaborative meditation option (using google meetup, facetime or other video app, not sure what the options are)
 
 ## GraphQL Fields: 
 * GraphQL endpoint: https://drala-mountain-api-4812ef039e59.herokuapp.com/graphql
@@ -118,29 +133,7 @@ mutation {
 * mutations: createMeditationByEmail(input: { totalSittingTime: Integer, userEmail: "String"
 * available fields: id, totalSittingTime, createdAt, completedBy { any_user_field }
 
-## MVP 
-* Recreate the feel of Drala-Mounatain-Center's web application as a phone application.
-* Create a link to Drala Mountain Center donation site, Network for Good within our application.
-* Create a meditation timer page that provides user with a soothing experience while meditating.
-* Database of DMC video talks, searchable, possibly using Vimeo.
-* Import program calendar from DMC website backend.
-* Integrate GraphQL as a stretch technology to facilitate API calls to our backend
-* Integrate React Native as a stretch technology to prepare application for IOS deployment.
-
-## Possible Extensions
-
-* Login for user, to allow for statistics collection.
-* User data collection displayed: "Here's your meditation habits, you've watched these videos".
-* Randomized daily quotes from highly regarded figures linked to DMC or lojong slogans.
-* Stripe/Auth.net/square for payment integration (likely prefer Stripe or something that can take apple/google pay, Paypal, Venmo, etc.
-* Hosting on Android and Apple Store.
-* AWS/Docker integration.
-* Like/Love buttons/discussion boards for videos.
-* Specific Advanced Practice Trackers (Ngondro/Stroke Practice).
-* Integrate Web-sockets to add live chat feature.
-* Add collaborative meditation option (using google meetup, facetime or other video app, not sure what the options are)
-
-## Wireframes
+## Application Images
 
 <pre>
     <code>
