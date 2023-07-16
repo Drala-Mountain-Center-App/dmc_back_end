@@ -56,11 +56,62 @@ The Front End is built on React Native and written in Javascript. The Back End i
 
 
 
-## Set Up: 
+## GraphQL Fields: 
+* GraphQL endpoint: https://drala-mountain-api-4812ef039e59.herokuapp.com/graphql
 
-1. Don't 
+### Queries and Mutations:
+* Example Query:
+```
+query{
+ allUsers {
+   id
+   firstName
+   lastName
+   email
+   member
+ }
+}
+```
 
+* Example Mutation:
+```
+mutation {
+    createMeditationByEmail(input: {
+        totalSittingTime: 10,
+        userEmail: "bobdylan@gmail.com"
+    }){
+        id
+        totalSittingTime
+        createdAt
+        completedBy {
+            id
+            firstName
+        }
+    }
+}
+```
+#### List of queries
 
+##### User Queries
+* queries: allUsers, user(id: user_id), userByEmail(email: "user_email")
+* fields: id, firstName, lastName, email, member, totalMeditations, totalMeditationTime, averageMeditationTime
+
+##### Video Queries
+* queries: allVideos, videoById(id: video_id)
+* fields: id, title, description, speaker, topic, length, dateRecorded, videoUrl, thumbnailUrl, embedCode, vimeoId
+
+##### Program Queries
+* query: allPrograms
+* fields: name, startDate, endDate, content, image, price, url, registrationUrl, categories, teachers
+
+#### List of mutations
+
+##### User mutations
+* Not yet available for public production use
+
+##### Meditation mutations
+* mutations: createMeditationByEmail(input: { totalSittingTime: Integer, userEmail: "String"
+* available fields: id, totalSittingTime, createdAt, completedBy { any_user_field }
 
 ## MVP 
 * Recreate the feel of Drala-Mounatain-Center's web application as a phone application.
@@ -70,11 +121,19 @@ The Front End is built on React Native and written in Javascript. The Back End i
 * Import program calendar from DMC website backend.
 * Integrate GraphQL as a stretch technology to facilitate API calls to our backend
 * Integrate React Native as a stretch technology to prepare application for IOS deployment.
-<!-- <pre>
-    <code>
-      <img src="https://user-images.githubusercontent.com/112587650/252702713-1b23d445-c905-4ad8-ad54-988a234917b8.jpeg" alt="MVP Image" width="100%">
-    </code>
-</pre> -->
+
+## Possible Extensions
+
+* Login for user, to allow for statistics collection.
+* User data collection displayed: "Here's your meditation habits, you've watched these videos".
+* Randomized daily quotes from highly regarded figures linked to DMC or lojong slogans.
+* Stripe/Auth.net/square for payment integration (likely prefer Stripe or something that can take apple/google pay, Paypal, Venmo, etc.
+* Hosting on Android and Apple Store.
+* AWS/Docker integration.
+* Like/Love buttons/discussion boards for videos.
+* Specific Advanced Practice Trackers (Ngondro/Stroke Practice).
+* Integrate Web-sockets to add live chat feature.
+* Add collaborative meditation option (using google meetup, facetime or other video app, not sure what the options are)
 
 ## Wireframes
 
@@ -99,7 +158,7 @@ The Front End is built on React Native and written in Javascript. The Back End i
 
 <pre>
     <code>
-      <img src="https://user-images.githubusercontent.com/112587650/252702713-1b23d445-c905-4ad8-ad54-988a234917b8.jpeg" alt="Main Image" width="100%">
+      <img src="https://github.com/Drala-Mountain-Center-App/dmc_back_end/assets/121198380/e634bdfe-e66a-473e-86c9-3691aa6f1748" alt="DMC Schema Image" width="100%">
     </code>
 </pre>
 
