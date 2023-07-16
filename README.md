@@ -19,7 +19,14 @@
       <img src="https://user-images.githubusercontent.com/112587650/252702713-1b23d445-c905-4ad8-ad54-988a234917b8.jpeg" alt="Main Image" width="90%">
     </code>
   </pre>
+</div>
 <!-- Table of Contents -->
+
+# Table of Contents
+- [About](https://github.com/Drala-Mountain-Center-App/dmc_back_end/edit/27-create-backend-readme/README.md#about)
+- [Built With](#built-with)
+- [Contributors](#contributors)
+ 
   <details>
       <summary>Table of Contents</summary>
       <ol>
