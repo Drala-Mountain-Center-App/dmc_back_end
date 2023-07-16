@@ -7,18 +7,10 @@
 
 <!-- DMC Logo -->
 <div align="center">
- <pre>
-    <code>
-      <img src="https://user-images.githubusercontent.com/112587650/253305295-f548caac-b273-4f40-b29e-f5284e94109a.jpeg" alt="DMC Logo" width="90%">
-    </code>
-  </pre>
+  <img src="https://user-images.githubusercontent.com/112587650/253305295-f548caac-b273-4f40-b29e-f5284e94109a.jpeg" alt="DMC Logo" width="90%">
   </br>
 <!-- Main Image -->
- <pre>
-    <code>
-      <img src="https://user-images.githubusercontent.com/112587650/252702713-1b23d445-c905-4ad8-ad54-988a234917b8.jpeg" alt="Main Image" width="90%">
-    </code>
-  </pre>
+  <img src="https://user-images.githubusercontent.com/112587650/252702713-1b23d445-c905-4ad8-ad54-988a234917b8.jpeg" alt="Main Image" width="90%">
 </div>
 <!-- Table of Contents -->
 
@@ -32,7 +24,7 @@
  - [Queries and Mutations](#queries-and-mutations)
   - [List of queries](#list-of-queries)
   - [List of mutations](#list-of-mutations)
-- [Application Images](#application-images)
+- [Application Tour](#application-tour)
 - [Schema](#schema)
 - [Contributors](#contributors)
 
@@ -133,32 +125,13 @@ mutation {
 * mutations: createMeditationByEmail(input: { totalSittingTime: Integer, userEmail: "String"
 * available fields: id, totalSittingTime, createdAt, completedBy { any_user_field }
 
-## Application Images
+## Application Tour
 
-<pre>
-    <code>
-      <img src="https://user-images.githubusercontent.com/112587650/253416539-4fa40861-68f1-46b2-954d-ab346ce4b8c4.png" alt="Wireframe Homepage Image" width="50%">
-    </code>
-    <br>
-
-    <code>
-      <img src="https://user-images.githubusercontent.com/112587650/253416949-f88c04cb-e87e-4da8-85a4-a1349ce247c0.png" alt="Wireframe Calendar Image" width="50%">
-    </code>
-    <br>
-
-    <code>
-      <img src="https://user-images.githubusercontent.com/112587650/253417164-ce8532f2-d160-4cc2-9946-154db0b4fafc.png" alt="Wireframe Calendar Image" width="50%">
-    </code>
-    <br>
-</pre>
+<img src="https://github.com/Drala-Mountain-Center-App/dmc_front_end/assets/49500224/22332e51-e7d2-4437-a35d-530156c316f8" alt="DMC App Tour" width=20%>
 
 ## Schema
 
-<pre>
-    <code>
-      <img src="https://github.com/Drala-Mountain-Center-App/dmc_back_end/assets/121198380/e634bdfe-e66a-473e-86c9-3691aa6f1748" alt="DMC Schema Image" width="90%">
-    </code>
-</pre>
+<img src="https://github.com/Drala-Mountain-Center-App/dmc_back_end/assets/121198380/e634bdfe-e66a-473e-86c9-3691aa6f1748" alt="DMC Schema Image" width="90%">
 
 ## Contributors
 
