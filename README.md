@@ -35,6 +35,7 @@
   </details>
 
 ## About
+
 The Drala Mountain Center App was made in association with [Drala Mountain Center](https://www.dralamountain.org/).
 The App allows users to see scheduled retreats, meditate with a meditation timer, and view videos embeded in the app, and donate to DMC via their website. <br>
 The Front End is built on React Native and written in Javascript. The Back End is built with Ruby on Rails. The Front End makes querries to the Back End GraphQL. 
