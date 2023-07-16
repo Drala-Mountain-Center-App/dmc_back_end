@@ -9,14 +9,14 @@
 <div align="center">
  <pre>
     <code>
-      <img src="https://user-images.githubusercontent.com/112587650/253305295-f548caac-b273-4f40-b29e-f5284e94109a.jpeg" alt="DMC Logo" width="100%">
+      <img src="https://user-images.githubusercontent.com/112587650/253305295-f548caac-b273-4f40-b29e-f5284e94109a.jpeg" alt="DMC Logo" width="90%">
     </code>
   </pre>
   </br>
 <!-- Main Image -->
  <pre>
     <code>
-      <img src="https://user-images.githubusercontent.com/112587650/252702713-1b23d445-c905-4ad8-ad54-988a234917b8.jpeg" alt="Main Image" width="100%">
+      <img src="https://user-images.githubusercontent.com/112587650/252702713-1b23d445-c905-4ad8-ad54-988a234917b8.jpeg" alt="Main Image" width="90%">
     </code>
   </pre>
 <!-- Table of Contents -->
@@ -37,9 +37,8 @@
 ## About
 
 The Drala Mountain Center App was made in association with [Drala Mountain Center](https://www.dralamountain.org/).
-The App allows users to see scheduled retreats, meditate with a meditation timer, and view videos embeded in the app, and donate to DMC via their website. <br>
-The Front End is built on React Native and written in Javascript. The Back End is built with Ruby on Rails. The Front End makes querries to the Back End GraphQL. 
-
+The App allows users to see scheduled programs, meditate with a meditation timer, view videos embeded in the app, view their meditation stats, view images of DMC, and donate to DMC via their website. <br>
+The dmc_back_end application provides a single GraphQL endpoint with all app information. The team chose GraphQL for the simplicity of having a single endpoint with the capability to be flexible and efficient when handling queries from the front end application. 
 </div>
 
 ### Built With:
@@ -158,15 +157,7 @@ mutation {
 
 <pre>
     <code>
-      <img src="https://github.com/Drala-Mountain-Center-App/dmc_back_end/assets/121198380/e634bdfe-e66a-473e-86c9-3691aa6f1748" alt="DMC Schema Image" width="100%">
-    </code>
-</pre>
-
-## Extensions
-
-<pre>
-    <code>
-      <img src="https://user-images.githubusercontent.com/112587650/252702713-1b23d445-c905-4ad8-ad54-988a234917b8.jpeg" alt="Main Image" width="100%">
+      <img src="https://github.com/Drala-Mountain-Center-App/dmc_back_end/assets/121198380/e634bdfe-e66a-473e-86c9-3691aa6f1748" alt="DMC Schema Image" width="90%">
     </code>
 </pre>
 
