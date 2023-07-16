@@ -25,11 +25,11 @@
       <ol>
         <li><a href="##About">About</a></li>
         <li><a href="##Built-With">Built With</a></li>
-        <li><a href="##Setup">Set up</a></li>
+        <li><a href="##GraphQL-Fields">GraphQL Fields</a></li>
         <li><a href="##MVP">MVP</a></li>
+        <li><a href="##Possible-Extensions">Possible Extensions</a></li>
         <li><a href="##Wireframes">Wireframes</a></li>
         <li><a href="##Schema">Schema</a></li>
-        <li><a href="##Extensions">Extensions</a></li>
         <li><a href="##Contributors">Contributors</a></li>
       </ol>
   </details>
@@ -42,15 +42,14 @@ The dmc_back_end application provides a single GraphQL endpoint with all app inf
 </div>
 
 ### Built With:
-
-* [![ruby][ruby]][ruby-url]
-* [![rails][rails]][rails-url]
-* [![postgresql][postgresql]][postgresql-url]
-* [![javascript][javascript]][javascript-url]
-* [![react-native][react-native]][react-native-url]
-* [![heroku][heroku]][heroku-url]
-* [![graphql][graphql]][graphql-url]
-* [![expo][expo]][expo-url]
+[![ruby][ruby]][ruby-url]
+[![rails][rails]][rails-url]
+[![postgresql][postgresql]][postgresql-url]
+[![javascript][javascript]][javascript-url]
+[![react-native][react-native]][react-native-url]
+[![heroku][heroku]][heroku-url]
+[![graphql][graphql]][graphql-url]
+[![expo][expo]][expo-url]
 
 
 
