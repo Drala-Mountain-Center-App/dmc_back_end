@@ -7,16 +7,18 @@
 
 <!-- DMC Logo -->
 <div align="center">
-  <img src="https://user-images.githubusercontent.com/112587650/253305295-f548caac-b273-4f40-b29e-f5284e94109a.jpeg" alt="DMC Logo" width="90%">
-  </br>
+  <img src="https://user-images.githubusercontent.com/112587650/253305295-f548caac-b273-4f40-b29e-f5284e94109a.jpeg" alt="DMC Logo" width="50%" height="200">
+</div>
 <!-- Main Image -->
-  <img src="https://user-images.githubusercontent.com/112587650/252702713-1b23d445-c905-4ad8-ad54-988a234917b8.jpeg" alt="Main Image" width="90%">
+<div align="center">
+  <img src="https://github.com/Drala-Mountain-Center-App/dmc_front_end/assets/115356592/fd463a24-485d-4b04-938f-94d1d1689d2e" alt="timer" width="400" />
 </div>
 <!-- Table of Contents -->
 
 # Table of Contents
 
 - [About](#about)
+- [Application Tour](#application-tour)
 - [Built With](#built-with)
 - [Minimum Viable Product](#minimum-viable-product)
 - [Possible Extensions](#possible-extensions)
@@ -24,8 +26,8 @@
  - [Queries and Mutations](#queries-and-mutations)
   - [List of queries](#list-of-queries)
   - [List of mutations](#list-of-mutations)
-- [Application Tour](#application-tour)
 - [Schema](#schema)
+- [Wireframe](#wireframe)
 - [Contributors](#contributors)
 
 
@@ -34,6 +36,13 @@
 The Drala Mountain Center App was made in association with [Drala Mountain Center](https://www.dralamountain.org/).
 The App allows users to see scheduled programs, meditate with a meditation timer, view videos embeded in the app, view their meditation stats, view images of DMC, and donate to DMC via their website. <br>
 The dmc_back_end application provides a single GraphQL endpoint with all app information. The team chose GraphQL for the simplicity of having a single endpoint with the capability to be flexible and efficient when handling queries from the front end application. 
+</div>
+
+## Application Tour
+
+<div style="display: flex; justify-content: space-between;">
+  <img src="https://github.com/Drala-Mountain-Center-App/dmc_front_end/assets/115356592/e9d40706-7568-4b1f-ae80-4f07cd4f1f21" alt="login" width="300" />
+  <img src="https://github.com/Drala-Mountain-Center-App/dmc_front_end/assets/115356592/4ce76c83-f745-4b43-bec7-e04e4ddd8ad1" alt="calendar" width="300" />
 </div>
 
 ### Built With:
@@ -125,13 +134,13 @@ mutation {
 * mutations: createMeditationByEmail(input: { totalSittingTime: Integer, userEmail: "String"
 * available fields: id, totalSittingTime, createdAt, completedBy { any_user_field }
 
-## Application Tour
-
-<img src="https://github.com/Drala-Mountain-Center-App/dmc_front_end/assets/49500224/22332e51-e7d2-4437-a35d-530156c316f8" alt="DMC App Tour" width=20%>
-
 ## Schema
 
 <img src="https://github.com/Drala-Mountain-Center-App/dmc_back_end/assets/121198380/e634bdfe-e66a-473e-86c9-3691aa6f1748" alt="DMC Schema Image" width="90%">
+
+## Wireframe
+
+![wireframe](https://github.com/Drala-Mountain-Center-App/dmc_front_end/assets/115356592/c108f538-8916-48eb-a887-84256e8810eb)
 
 ## Contributors
 
